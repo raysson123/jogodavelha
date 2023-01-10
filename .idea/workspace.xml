@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abd39d3b-b27a-4323-95c5-2eca2c47d9b7" name="Changes" comment="">
+    <list default="true" id="abd39d3b-b27a-4323-95c5-2eca2c47d9b7" name="Changes" comment="verção 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
     </list>
@@ -65,11 +65,34 @@
       <option name="presentableId" value="Default" />
       <updated>1673382802858</updated>
       <workItem from="1673382805145" duration="35000" />
-      <workItem from="1673383414463" duration="653000" />
+      <workItem from="1673383414463" duration="1143000" />
     </task>
+    <task id="LOCAL-00001" summary="verção 1">
+      <created>1673384125262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673384125262</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="verção 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="verção 1" />
   </component>
 </project>
