@@ -1,14 +1,23 @@
 import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {useState} from "react";
+import React, {useState} from "react";
 
 export default function App() {
     const [tela, setTela] = useState('menu');
-    const [jogadorAtual,setJogadorAtual]= useState('');
+    const [jogadorAtual, setJogadorAtual] = useState('');
     const [tabuleiro, setTabuleiro] = useState([]);
-    const [jogadasRestantes, setJogadasRestantes ] = useState(0);
-    const[ganhador, setganhador] = useState('');
+    const [jogadasRestantes, setJogadasRestantes] = useState(0);
+    const [ganhador, setganhador] = useState('');
 
+    function iniciarJogo(jogador: string) {
+        setJogadasRestantes(9);
+        setJogadorAtual(jogador);
+
+        // @ts-ignore
+        setTabuleiro([['', '', ''], ['', '', ''], ['', '', '']]);
+        setTela('Jogo')
+
+    }
 
     switch (tela) {
         case 'menu':
@@ -28,11 +37,15 @@ export default function App() {
                 <Text style={styles.titulo}>Jogo da Velha</Text>
                 <Text style={styles.subtitulo}>Selecione o primeiro jogado</Text>
                 < View style={styles.inlineItems}>
-                    <TouchableOpacity style={styles.boxJogador}>
+                    <TouchableOpacity style={styles.boxJogador}
+                                      onPress={() => iniciarJogo('X')}
+                    >
                         <Text style={styles.jogadorX}>X</Text>
 
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.boxJogador}>
+                    <TouchableOpacity style={styles.boxJogador}
+                                      onPress={() => iniciarJogo('O')}
+                    >
                         <Text style={styles.jogadorO}>O</Text>
 
                     </TouchableOpacity>
@@ -45,8 +58,35 @@ export default function App() {
     function getTelaJogo() {
         return (
             <View style={styles.container}>
-                <Text>meunu</Text>
                 <StatusBar style="auto"/>
+                <Text style={styles.titulo}>Jogo da Velha</Text>
+                <Text style={styles.subtitulo}>Selecione o primeiro jogado</Text>
+                {
+                    tabuleiro.map((linha, numeroLinh) => {
+                        return (
+                            <View key={numeroLinh} style={styles.inlineItems}>
+                                {
+                                    tabuleiro.map((coluna, numerocoluna) => {
+                                        return (
+                                            <View key={numerocoluna} style={styles.inlineItems}>
+                                                <TouchableOpacity
+                                                    key={numerocoluna}
+                                                    style={styles.boxJogador}>
+
+                                                    <Text
+                                                        style={coluna === 'x' ? styles.jogadorX : styles.jogadorO}>{coluna}</Text>
+                                                </TouchableOpacity>
+                                            </View>
+                                        )
+                                    })
+                                }
+                            </View>
+                        )
+                    })
+                }
+                <TouchableOpacity style={styles.btmenu} onPress={()=>setTela('menu')}>
+                    <Text style={styles.textbtMenu}>votar menu</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -105,7 +145,13 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         margin: 5
     },
-    inlineItems:{
+    inlineItems: {
         flexDirection: 'row'
+    },
+    btmenu: {
+        marginTop: 20
+    },
+    textbtMenu: {
+        color:'#4e6fe4'
     }
 });

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abd39d3b-b27a-4323-95c5-2eca2c47d9b7" name="Changes" comment="verção 1">
+    <list default="true" id="abd39d3b-b27a-4323-95c5-2eca2c47d9b7" name="Changes" comment="verção 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
     </list>
@@ -35,6 +35,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\rayss\\WebstormProjects\\jogodavelha\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -65,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673382802858</updated>
       <workItem from="1673382805145" duration="35000" />
-      <workItem from="1673383414463" duration="3407000" />
+      <workItem from="1673383414463" duration="7302000" />
     </task>
     <task id="LOCAL-00001" summary="verção 1">
       <created>1673384125262</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673385373309</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="verção 2">
+      <created>1673397210390</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673397210390</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="verção 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="verção 1" />
+    <MESSAGE value="verção 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="verção 2" />
   </component>
 </project>
