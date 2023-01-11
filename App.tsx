@@ -4,6 +4,12 @@ import {useState} from "react";
 
 export default function App() {
     const [tela, setTela] = useState('menu');
+    const [jogadorAtual,setJogadorAtual]= useState('');
+    const [tabuleiro, setTabuleiro] = useState([]);
+    const [jogadasRestantes, setJogadasRestantes ] = useState(0);
+    const[ganhador, setganhador] = useState('');
+
+
     switch (tela) {
         case 'menu':
             return getTelaMenu();
@@ -21,14 +27,17 @@ export default function App() {
                 <StatusBar style="auto"/>
                 <Text style={styles.titulo}>Jogo da Velha</Text>
                 <Text style={styles.subtitulo}>Selecione o primeiro jogado</Text>
-                <TouchableOpacity>
-                    <Text style={styles.jogadorX}>X</Text>
+                < View style={styles.inlineItems}>
+                    <TouchableOpacity style={styles.boxJogador}>
+                        <Text style={styles.jogadorX}>X</Text>
 
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text style={styles.jogadorO}>O</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.boxJogador}>
+                        <Text style={styles.jogadorO}>O</Text>
 
-                </TouchableOpacity>
+                    </TouchableOpacity>
+                </View>
+
             </View>
         );
     }
@@ -80,10 +89,23 @@ const styles = StyleSheet.create({
         color: "#555",
         marginTop: 20
     },
-    jogadorX:{
-
+    jogadorX: {
+        fontSize: 40,
+        color: '#553fda'
     },
-    jogadorO:{
-
+    jogadorO: {
+        fontSize: 40,
+        color: '#da3f3f'
+    },
+    boxJogador: {
+        width: 80,
+        height: 80,
+        backgroundColor: "#ddd",
+        alignItems: 'center',
+        justifyContent: "center",
+        margin: 5
+    },
+    inlineItems:{
+        flexDirection: 'row'
     }
 });
